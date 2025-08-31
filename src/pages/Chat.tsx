@@ -183,7 +183,7 @@ The key is to remain centered in the Self while engaging fully with the world. T
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Get trustworthy insights from the Bhagavad Gita with clear citations. 
-            Ask questions about verses, concepts, or practical applications.
+            Ask questions about verses, concepts, or practical applications of the teachings.
           </p>
         </div>
 
