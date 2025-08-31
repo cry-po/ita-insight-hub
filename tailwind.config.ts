@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'heading': ['Inter', 'system-ui', 'sans-serif'],
+				'body': ['Inter', 'system-ui', 'sans-serif'],
+				'sanskrit': ['Noto Serif Devanagari', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -63,12 +68,50 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			backgroundImage: {
+				'gradient-lotus': 'var(--gradient-lotus)',
+				'gradient-dawn': 'var(--gradient-dawn)',
+				'gradient-wisdom': 'var(--gradient-wisdom)',
+			},
+			boxShadow: {
+				'lotus': 'var(--shadow-lotus)',
+				'peaceful': 'var(--shadow-peaceful)',
+				'verse': 'var(--shadow-verse)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'lotus-bloom': {
+					'0%': {
+						transform: 'scale(0.95) rotate(-1deg)',
+						opacity: '0.8'
+					},
+					'100%': {
+						transform: 'scale(1) rotate(0deg)',
+						opacity: '1'
+					}
+				},
+				'gentle-fade': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(8px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'wisdom-glow': {
+					'0%, 100%': {
+						boxShadow: 'var(--shadow-peaceful)'
+					},
+					'50%': {
+						boxShadow: 'var(--shadow-lotus)'
+					}
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -87,6 +130,9 @@ export default {
 				}
 			},
 			animation: {
+				'lotus-bloom': 'lotus-bloom 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+				'gentle-fade': 'gentle-fade 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+				'wisdom-glow': 'wisdom-glow 3s ease-in-out infinite',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}

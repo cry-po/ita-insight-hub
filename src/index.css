@@ -2,95 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Bhagavad Gita Help Design System - Serene, respectful, modern */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Light Theme - Cream/ivory with deep indigo and sacred accents */
+    --background: 42 15% 97%;           /* Warm ivory */
+    --foreground: 229 84% 5%;           /* Deep indigo */
+    
+    --card: 42 20% 99%;                 /* Pure ivory cards */
+    --card-foreground: 229 84% 5%;      /* Deep indigo text */
+    
+    --popover: 42 20% 99%;
+    --popover-foreground: 229 84% 5%;
+    
+    --primary: 29 100% 48%;             /* Saffron */
+    --primary-foreground: 42 20% 99%;   /* Ivory text on saffron */
+    
+    --secondary: 158 100% 33%;          /* Jade */
+    --secondary-foreground: 42 20% 99%; /* Ivory text on jade */
+    
+    --muted: 42 10% 90%;                /* Soft cream */
+    --muted-foreground: 229 15% 35%;    /* Muted indigo */
+    
+    --accent: 158 100% 33%;             /* Jade accent */
+    --accent-foreground: 42 20% 99%;
+    
+    --destructive: 0 72% 51%;           /* Error red */
+    --destructive-foreground: 42 20% 99%;
+    
+    --border: 42 15% 87%;               /* Subtle cream border */
+    --input: 42 15% 87%;
+    --ring: 29 100% 48%;                /* Saffron focus ring */
+    
+    --radius: 1rem;                     /* Generous rounded corners */
+    
+    /* Sacred gradients */
+    --gradient-lotus: linear-gradient(135deg, hsl(29 100% 48%), hsl(158 100% 33%));
+    --gradient-dawn: linear-gradient(180deg, hsl(42 15% 97%), hsl(42 25% 94%));
+    --gradient-wisdom: linear-gradient(135deg, hsl(229 84% 5%), hsl(229 50% 25%));
+    
+    /* Shadows with sacred glow */
+    --shadow-lotus: 0 10px 30px -10px hsl(29 100% 48% / 0.3);
+    --shadow-peaceful: 0 4px 20px -4px hsl(42 15% 87% / 0.4);
+    --shadow-verse: 0 2px 12px -2px hsl(42 15% 87% / 0.6);
+    
+    /* Typography scales */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-sanskrit: 'Noto Serif Devanagari', serif;
+    
+    /* Animation timings */
+    --transition-peaceful: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Sidebar theme */
+    --sidebar-background: 42 20% 99%;
+    --sidebar-foreground: 229 84% 5%;
+    --sidebar-primary: 29 100% 48%;
+    --sidebar-primary-foreground: 42 20% 99%;
+    --sidebar-accent: 42 10% 90%;
+    --sidebar-accent-foreground: 229 84% 5%;
+    --sidebar-border: 42 15% 87%;
+    --sidebar-ring: 29 100% 48%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark Theme - Graphite with warm grays and sacred accents */
+    --background: 229 20% 8%;           /* Deep graphite */
+    --foreground: 42 15% 88%;           /* Warm light gray */
+    
+    --card: 229 25% 10%;                /* Dark cards */
+    --card-foreground: 42 15% 88%;
+    
+    --popover: 229 25% 10%;
+    --popover-foreground: 42 15% 88%;
+    
+    --primary: 29 100% 58%;             /* Brighter saffron for contrast */
+    --primary-foreground: 229 20% 8%;   /* Dark text on saffron */
+    
+    --secondary: 158 85% 45%;           /* Brighter jade */
+    --secondary-foreground: 229 20% 8%;
+    
+    --muted: 229 15% 15%;               /* Dark muted */
+    --muted-foreground: 42 10% 65%;     /* Warm gray */
+    
+    --accent: 158 85% 45%;              /* Jade accent */
+    --accent-foreground: 229 20% 8%;
+    
+    --destructive: 0 75% 58%;
+    --destructive-foreground: 42 15% 88%;
+    
+    --border: 229 15% 18%;              /* Subtle dark border */
+    --input: 229 15% 18%;
+    --ring: 29 100% 58%;                /* Bright saffron focus */
+    
+    /* Dark sacred gradients */
+    --gradient-lotus: linear-gradient(135deg, hsl(29 100% 58%), hsl(158 85% 45%));
+    --gradient-dawn: linear-gradient(180deg, hsl(229 20% 8%), hsl(229 25% 12%));
+    --gradient-wisdom: linear-gradient(135deg, hsl(229 20% 8%), hsl(229 30% 15%));
+    
+    /* Dark shadows */
+    --shadow-lotus: 0 10px 30px -10px hsl(29 100% 58% / 0.4);
+    --shadow-peaceful: 0 4px 20px -4px hsl(229 15% 18% / 0.6);
+    --shadow-verse: 0 2px 12px -2px hsl(229 15% 18% / 0.8);
+    
+    /* Dark sidebar */
+    --sidebar-background: 229 25% 10%;
+    --sidebar-foreground: 42 15% 88%;
+    --sidebar-primary: 29 100% 58%;
+    --sidebar-primary-foreground: 229 20% 8%;
+    --sidebar-accent: 229 15% 15%;
+    --sidebar-accent-foreground: 42 15% 88%;
+    --sidebar-border: 229 15% 18%;
+    --sidebar-ring: 29 100% 58%;
   }
 }
 
@@ -100,6 +125,101 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Sanskrit text styling */
+  .sanskrit {
+    font-family: var(--font-sanskrit);
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+  
+  /* Verse typography */
+  .verse-text {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    font-weight: 400;
+  }
+  
+  /* Sacred animations */
+  @keyframes lotus-bloom {
+    0% {
+      transform: scale(0.95) rotate(-1deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes gentle-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes wisdom-glow {
+    0%, 100% {
+      box-shadow: var(--shadow-peaceful);
+    }
+    50% {
+      box-shadow: var(--shadow-lotus);
+    }
+  }
+}
+
+@layer components {
+  /* Sacred component utilities */
+  .lotus-bloom {
+    animation: lotus-bloom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .gentle-fade {
+    animation: gentle-fade 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .wisdom-glow {
+    animation: wisdom-glow 3s ease-in-out infinite;
+  }
+  
+  .gradient-lotus {
+    background: var(--gradient-lotus);
+  }
+  
+  .gradient-dawn {
+    background: var(--gradient-dawn);
+  }
+  
+  .gradient-wisdom {
+    background: var(--gradient-wisdom);
+  }
+  
+  .shadow-lotus {
+    box-shadow: var(--shadow-lotus);
+  }
+  
+  .shadow-peaceful {
+    box-shadow: var(--shadow-peaceful);
+  }
+  
+  .shadow-verse {
+    box-shadow: var(--shadow-verse);
+  }
+  
+  .transition-peaceful {
+    transition: var(--transition-peaceful);
+  }
+  
+  .transition-gentle {
+    transition: var(--transition-gentle);
   }
 }
