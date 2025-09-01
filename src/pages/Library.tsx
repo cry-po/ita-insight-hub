@@ -207,6 +207,13 @@ export default function Library() {
                             Read Now
                           </Link>
                         </Button>
+                        {text.id === "bhagavad-gita" && (
+                          <Button asChild variant="outline" size="sm">
+                            <a href="/BhagvatGita.pdf" target="_blank" rel="noopener noreferrer">
+                              PDF
+                            </a>
+                          </Button>
+                        )}
                         <Button variant="outline" size="sm">
                           Preview
                         </Button>
